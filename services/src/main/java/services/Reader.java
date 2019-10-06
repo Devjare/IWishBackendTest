@@ -1,5 +1,6 @@
 package services;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.media.Image;
 import android.media.MediaMetadataRetriever;
@@ -18,7 +19,7 @@ public class Reader {
 
     }
 
-    public Reader ReadFromServer(String url){
+    public Reader ReadFromServer(Context context, String url){
 
         ImageRequest request = new ImageRequest(url, new Response.Listener<Bitmap>(){
             @Override
@@ -31,6 +32,7 @@ public class Reader {
                 result = null;
             }
         });
+        VolleySingleton.getInstance(context).addToRequestQueue(request);
         return this;
     }
 

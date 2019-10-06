@@ -1,5 +1,6 @@
 package com.devjare.business;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.media.Image;
 
@@ -9,9 +10,9 @@ import services.Reader;
 
 public class ServerReader {
 
-    public static Bitmap SendImageRequest(String url){
+    public static Bitmap SendImageRequest(Context context, String url){
 
-        return new Reader().ReadFromServer(url).getResult();
+        return new Reader().ReadFromServer(context, url).getResult();
     }
 
 }
