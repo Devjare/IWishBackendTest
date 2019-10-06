@@ -1,0 +1,2 @@
+include ':app', ':business', ':exceptions', ':services', ':entities'
+rootProject.name='IWishBackend'
