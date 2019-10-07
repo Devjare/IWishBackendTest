@@ -1,2 +1,2 @@
-include ':app', ':business', ':exceptions', ':services', ':entities'
+include ':app', ':business', ':exceptions', ':services', ':entities', ':test'
 rootProject.name='IWishBackend'
